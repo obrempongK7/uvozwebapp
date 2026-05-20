@@ -4,6 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class RewardCatalog extends Model {
+    protected $table = 'reward_catalog';
     protected $fillable = ['title','description','image','category','points_required','usd_value',
         'stock_quantity','delivery_method','available_countries','processing_days','terms','is_active','redemptions_count'];
     protected $casts = ['available_countries'=>'array','is_active'=>'boolean','usd_value'=>'decimal:2'];
