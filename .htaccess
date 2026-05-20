@@ -1,3 +1,14 @@
-# Block all access - public/ is the document root
-Options -Indexes
-Deny from all
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Prevent directory listing
+    Options -Indexes
+
+    # Allow access to install/ and public/ directory directly if needed
+    RewriteCond %{REQUEST_URI} ^/install/.*$ [OR]
+    RewriteCond %{REQUEST_URI} ^/public/.*$
+    RewriteRule ^(.*)$ - [L]
+
+    # Redirect everything else to public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
