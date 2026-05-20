@@ -1,0 +1,15 @@
+*
+!.gitignore
+!app/
+!app/public/
+!app/public/.gitkeep
+!framework/
+!framework/cache/
+!framework/cache/data/
+!framework/cache/data/.gitkeep
+!framework/sessions/
+!framework/sessions/.gitkeep
+!framework/views/
+!framework/views/.gitkeep
+!logs/
+!logs/.gitkeep
