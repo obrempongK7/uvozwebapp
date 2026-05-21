@@ -61,15 +61,17 @@ Route::middleware('guest')->group(function () {
     Route::post('/forgot-password', [AuthController::class, 'sendResetLink'])->name('password.email');
     Route::get('/reset-password/{token}', [AuthController::class, 'showResetPassword'])->name('password.reset');
     Route::post('/reset-password', [AuthController::class, 'resetPassword'])->name('password.update');
-    Route::get('/verify-otp', [AuthController::class, 'showVerifyOtp'])->name('otp.verify');
-    Route::post('/verify-otp', [AuthController::class, 'verifyOtp']);
-    Route::post('/resend-otp', [AuthController::class, 'resendOtp'])->name('otp.resend');
+
 });
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 
-// Two-factor
+// Two-factor and OTP
 Route::middleware('auth')->group(function () {
+    Route::get('/verify-otp', [AuthController::class, 'showVerifyOtp'])->name('otp.verify');
+    Route::post('/verify-otp', [AuthController::class, 'verifyOtp']);
+    Route::post('/resend-otp', [AuthController::class, 'resendOtp'])->name('otp.resend');
+
     Route::get('/two-factor', [AuthController::class, 'showTwoFactor'])->name('two-factor');
     Route::post('/two-factor', [AuthController::class, 'verifyTwoFactor']);
 });
@@ -77,7 +79,7 @@ Route::middleware('auth')->group(function () {
 // ==============================
 // AUTHENTICATED USER ROUTES
 // ==============================
-Route::middleware(['auth', 'verified', 'active'])->group(function () {
+Route::middleware(['auth', 'verified:otp.verify', 'active'])->group(function () {
 
     // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
