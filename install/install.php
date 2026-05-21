@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $step === 4) {
 
         // Insert Admin User
         $hashedPassword = password_hash($adminPass, PASSWORD_BCRYPT);
-        $stmt = $pdo->prepare("INSERT INTO users (username, email, password, display_name, email_verified_at, is_admin, status) VALUES (?, ?, ?, ?, NOW(), 1, 'active')");
+        $stmt = $pdo->prepare("INSERT INTO users (username, email, password, display_name, email_verified_at, role, is_active) VALUES (?, ?, ?, ?, NOW(), 'super_admin', 1)");
         $stmt->execute(['admin', $adminEmail, $hashedPassword, 'Administrator']);
 
         $adminId = $pdo->lastInsertId();
