@@ -77,7 +77,7 @@ Route::middleware('auth')->group(function () {
 // ==============================
 // AUTHENTICATED USER ROUTES
 // ==============================
-Route::middleware(['auth', 'verified', 'active'])->group(function () {
+Route::middleware(['auth', 'verified:otp.verify', 'active'])->group(function () {
 
     // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
