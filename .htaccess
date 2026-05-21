@@ -5,9 +5,8 @@
     Options -Indexes
 
     # Allow access to install/ and public/ directory directly if needed
-    RewriteCond %{REQUEST_URI} ^/install/.*$ [OR]
-    RewriteCond %{REQUEST_URI} ^/public/.*$
-    RewriteRule ^(.*)$ - [L]
+    RewriteRule ^install/ - [L]
+    RewriteRule ^public/ - [L]
 
     # Redirect everything else to public/
     RewriteRule ^(.*)$ public/$1 [L]
