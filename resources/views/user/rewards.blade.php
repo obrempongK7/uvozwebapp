@@ -4,7 +4,7 @@
 <div class="max-w-4xl mx-auto">
 <div class="flex items-center justify-between mb-6">
 <div><h1 class="text-2xl font-bold text-white">Reward Store</h1><p class="text-slate-400 text-sm mt-1">Redeem your points for amazing rewards</p></div>
-<div class="card px-4 py-2 flex items-center gap-2" style="border-color:rgba(124,58,237,.3);">
+<div class="card px-4 py-2 flex items-center gap-2" style="border-color:rgba(139,92,246,.3);">
 <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
 <span class="font-bold text-white">{{ number_format($wallet?->points_balance ?? 0) }}</span>
 <span class="text-xs text-slate-400">points</span>

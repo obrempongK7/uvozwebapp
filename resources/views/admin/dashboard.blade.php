@@ -5,10 +5,10 @@
 <!-- Stats Grid -->
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
 @foreach([
-['Total Users', number_format($stats['total_users']), '+'.number_format($stats['new_users_today']).' today', '#7C3AED', 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z'],
+['Total Users', number_format($stats['total_users']), '+'.number_format($stats['new_users_today']).' today', '#8B5CF6', 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z'],
 ['Active Users', number_format($stats['active_users']), '30-day actives', '#10B981', 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'],
-['Pending Withdrawals', number_format($stats['pending_withdrawals']), 'Needs review', '#F59E0B', 'M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z'],
-['Total Paid Out', '$'.number_format($stats['total_usd_paid'],2), 'Completed withdrawals', '#EC4899', 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'],
+['Pending Withdrawals', number_format($stats['pending_withdrawals']), 'Needs review', '#10B981', 'M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z'],
+['Total Paid Out', '$'.number_format($stats['total_usd_paid'],2), 'Completed withdrawals', '#06B6D4', 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'],
 ] as $s)
 <div class="stat-card">
 <div class="flex items-center justify-between mb-3">
@@ -26,10 +26,10 @@
 <!-- Action Alerts -->
 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
 @foreach([
-['Pending KYC', $stats['pending_kyc'], route('admin.kyc.index'), '#F59E0B'],
+['Pending KYC', $stats['pending_kyc'], route('admin.kyc.index'), '#10B981'],
 ['Pending Campaigns', $stats['pending_campaigns'], route('admin.campaigns.index'), '#8B5CF6'],
 ['Open Reports', $stats['open_reports'], route('admin.content.reports'), '#EF4444'],
-['Fraud Flags', $stats['fraud_flags'], route('admin.settings.fraud'), '#EC4899'],
+['Fraud Flags', $stats['fraud_flags'], route('admin.settings.fraud'), '#06B6D4'],
 ] as $alert)
 @if($alert[1] > 0)
 <a href="{{ $alert[2] }}" class="stat-card flex items-center gap-3 hover:bg-dark-hover transition-colors">
@@ -112,8 +112,8 @@ const ug={{ $userGrowth->pluck('date') }};
 const uv={{ $userGrowth->pluck('count') }};
 const pg={{ $pointsChart->pluck('date') }};
 const pv={{ $pointsChart->pluck('total') }};
-const opts={responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#1E293B'},ticks:{color:'#64748B',font:{size:10}}},y:{grid:{color:'#1E293B'},ticks:{color:'#64748B',font:{size:10}}}}};
-new Chart(document.getElementById('userChart'),{type:'line',data:{labels:ug,datasets:[{data:uv,borderColor:'#7C3AED',backgroundColor:'rgba(124,58,237,.1)',fill:true,tension:.4,borderWidth:2,pointRadius:3,pointBackgroundColor:'#7C3AED'}]},options:opts});
-new Chart(document.getElementById('pointsChart'),{type:'bar',data:{labels:pg,datasets:[{data:pv,backgroundColor:'rgba(236,72,153,.6)',borderColor:'#EC4899',borderWidth:1,borderRadius:6}]},options:opts});
+const opts={responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#222a3d'},ticks:{color:'#64748B',font:{size:10}}},y:{grid:{color:'#222a3d'},ticks:{color:'#64748B',font:{size:10}}}}};
+new Chart(document.getElementById('userChart'),{type:'line',data:{labels:ug,datasets:[{data:uv,borderColor:'#8B5CF6',backgroundColor:'rgba(139,92,246,.1)',fill:true,tension:.4,borderWidth:2,pointRadius:3,pointBackgroundColor:'#8B5CF6'}]},options:opts});
+new Chart(document.getElementById('pointsChart'),{type:'bar',data:{labels:pg,datasets:[{data:pv,backgroundColor:'rgba(6,182,212,.6)',borderColor:'#06B6D4',borderWidth:1,borderRadius:6}]},options:opts});
 </script>
 @endsection

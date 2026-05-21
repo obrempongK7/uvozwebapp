@@ -8,27 +8,27 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <style>
-*{font-family:'Inter',sans-serif;}
-body{background:#0B1020;color:#fff;}
-.gradient-text{background:linear-gradient(135deg,#7C3AED,#EC4899,#F59E0B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.gradient-bg{background:linear-gradient(135deg,#7C3AED 0%,#EC4899 50%,#F59E0B 100%);}
+*{font-family:'Inter',sans-serif;}h1,h2,h3,h4,h5,h6,.gradient-text{font-family:'Montserrat',sans-serif !important;}
+body{background:#0b1326;color:#fff;}
+.gradient-text{background:linear-gradient(135deg,#8B5CF6,#06B6D4,#10B981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.gradient-bg{background:linear-gradient(135deg,#8B5CF6 0%,#06B6D4 50%,#10B981 100%);}
 .glass{background:rgba(18,26,46,.8);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.05);}
-.card{background:#121A2E;border:1px solid #1E293B;border-radius:24px;}
-.btn-primary{background:linear-gradient(135deg,#7C3AED,#EC4899);color:white;border-radius:16px;padding:14px 28px;font-weight:700;transition:all .3s;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:1rem;}
-.btn-primary:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 12px 30px rgba(124,58,237,.4);}
-.btn-secondary{background:transparent;border:1px solid #1E293B;color:#CBD5E1;border-radius:16px;padding:14px 28px;font-weight:600;transition:all .3s;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;}
-.btn-secondary:hover{border-color:#7C3AED;color:white;background:rgba(124,58,237,.1);}
-.feature-card{background:#121A2E;border:1px solid #1E293B;border-radius:24px;padding:28px;transition:all .3s;}
-.feature-card:hover{border-color:#7C3AED;transform:translateY(-4px);box-shadow:0 16px 48px rgba(124,58,237,.15);}
-.pricing-card{background:#121A2E;border:1px solid #1E293B;border-radius:28px;padding:32px;transition:all .3s;}
-.pricing-card.featured{border:2px solid #7C3AED;background:linear-gradient(145deg,#15203A,#1a1040);}
+.card{background:#131b2e;border:1px solid #222a3d;border-radius:24px;}
+.btn-primary{background:linear-gradient(135deg,#8B5CF6,#06B6D4);color:white;border-radius:16px;padding:14px 28px;font-weight:700;transition:all .3s;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-size:1rem;}
+.btn-primary:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 12px 30px rgba(139,92,246,.4);}
+.btn-secondary{background:transparent;border:1px solid #222a3d;color:#CBD5E1;border-radius:16px;padding:14px 28px;font-weight:600;transition:all .3s;cursor:pointer;display:inline-flex;align-items:center;gap:8px;text-decoration:none;}
+.btn-secondary:hover{border-color:#8B5CF6;color:white;background:rgba(139,92,246,.1);}
+.feature-card{background:#131b2e;border:1px solid #222a3d;border-radius:24px;padding:28px;transition:all .3s;}
+.feature-card:hover{border-color:#8B5CF6;transform:translateY(-4px);box-shadow:0 16px 48px rgba(139,92,246,.15);}
+.pricing-card{background:#131b2e;border:1px solid #222a3d;border-radius:28px;padding:32px;transition:all .3s;}
+.pricing-card.featured{border:2px solid #8B5CF6;background:linear-gradient(145deg,#171f33,#1a1040);}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-12px);}}
 .float{animation:float 4s ease-in-out infinite;}
-@keyframes pulse-glow{0%,100%{box-shadow:0 0 20px rgba(124,58,237,.3);}50%{box-shadow:0 0 40px rgba(124,58,237,.6);}}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 20px rgba(139,92,246,.3);}50%{box-shadow:0 0 40px rgba(139,92,246,.6);}}
 .pulse-glow{animation:pulse-glow 2s ease-in-out infinite;}
 ::-webkit-scrollbar{width:4px;}
-::-webkit-scrollbar-track{background:#0B1020;}
-::-webkit-scrollbar-thumb{background:#1E293B;border-radius:4px;}
+::-webkit-scrollbar-track{background:#0b1326;}
+::-webkit-scrollbar-thumb{background:#222a3d;border-radius:4px;}
 </style>
 </head>
 <body>
@@ -60,14 +60,14 @@ body{background:#0B1020;color:#fff;}
 
 <!-- Hero Section -->
 <section class="min-h-screen flex items-center pt-16 relative overflow-hidden">
-<div class="absolute inset-0" style="background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(124,58,237,.25) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 90% 50%,rgba(236,72,153,.15) 0%,transparent 50%)"></div>
+<div class="absolute inset-0" style="background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(139,92,246,.25) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 90% 50%,rgba(6,182,212,.15) 0%,transparent 50%)"></div>
 <!-- Floating orbs -->
-<div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-3xl opacity-20" style="background:#7C3AED;animation:float 6s ease-in-out infinite;"></div>
-<div class="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full blur-3xl opacity-15" style="background:#EC4899;animation:float 8s ease-in-out infinite 2s;"></div>
+<div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-3xl opacity-20" style="background:#8B5CF6;animation:float 6s ease-in-out infinite;"></div>
+<div class="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full blur-3xl opacity-15" style="background:#06B6D4;animation:float 8s ease-in-out infinite 2s;"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
 <div class="grid lg:grid-cols-2 gap-16 items-center">
 <div>
-<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 text-sm font-medium" style="background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 text-sm font-medium" style="background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3);">
 <div class="w-2 h-2 gradient-bg rounded-full pulse-glow"></div>
 <span class="gradient-text">🎙️ Voice-First Social Platform</span>
 </div>
@@ -112,15 +112,15 @@ How It Works
 <div class="flex items-center gap-3 mb-4">
 <div class="w-10 h-10 gradient-bg rounded-full"></div>
 <div><p class="font-semibold text-white">Sarah K.</p><p class="text-xs text-slate-400">Voice Creator</p></div>
-<div class="ml-auto"><span style="background:rgba(16,185,129,.2);color:#34D399;border:1px solid rgba(16,185,129,.3);border-radius:20px;padding:3px 10px;font-size:.75rem;font-weight:600;">+250 pts</span></div>
+<div class="ml-auto"><span style="background:rgba(16,185,129,.2);color:#4edea3;border:1px solid rgba(16,185,129,.3);border-radius:20px;padding:3px 10px;font-size:.75rem;font-weight:600;">+250 pts</span></div>
 </div>
-<div class="rounded-2xl p-4 mb-4" style="background:#0B1020;">
+<div class="rounded-2xl p-4 mb-4" style="background:#0b1326;">
 <div class="flex items-center gap-3">
 <button class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
 <div class="flex-1">
 <p class="text-sm text-white font-medium">My Morning Routine 🌅</p>
 <div class="flex items-center gap-1 mt-2">
-@for($i=0;$i<20;$i++)<div class="flex-1 rounded-full" style="height:{{ rand(4,20) }}px;background:linear-gradient(180deg,#7C3AED,#EC4899);opacity:{{ rand(5,10)/10 }};"></div>@endfor
+@for($i=0;$i<20;$i++)<div class="flex-1 rounded-full" style="height:{{ rand(4,20) }}px;background:linear-gradient(180deg,#8B5CF6,#06B6D4);opacity:{{ rand(5,10)/10 }};"></div>@endfor
 </div>
 </div>
 </div>
@@ -156,7 +156,7 @@ How It Works
 @foreach([['1','Create Content','Record voice posts, share statuses, host podcasts or live sessions.','🎙️','purple'],['2','Get Engagement','Followers listen, like, comment and share your authentic content.','❤️','pink'],['3','Earn & Withdraw','Accumulate points and convert them to cash, airtime, or prizes.','💰','amber']] as $step)
 <div class="feature-card text-center">
 <div class="w-14 h-14 gradient-bg rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl">{{ $step[4] === 'purple' ? '🎙️' : ($step[4] === 'pink' ? '❤️' : '💰') }}</div>
-<div class="w-8 h-8 rounded-full flex items-center justify-center mx-auto -mt-2 mb-4 text-sm font-black text-white" style="background:rgba(124,58,237,.3);border:2px solid #7C3AED;">{{ $step[0] }}</div>
+<div class="w-8 h-8 rounded-full flex items-center justify-center mx-auto -mt-2 mb-4 text-sm font-black text-white" style="background:rgba(139,92,246,.3);border:2px solid #8B5CF6;">{{ $step[0] }}</div>
 <h3 class="text-xl font-bold text-white mb-3">{{ $step[1] }}</h3>
 <p class="text-slate-400 text-sm leading-relaxed">{{ $step[2] }}</p>
 </div>
@@ -167,7 +167,7 @@ How It Works
 
 <!-- Features Grid -->
 <section class="py-24 relative">
-<div class="absolute inset-0" style="background:radial-gradient(ellipse 60% 40% at 50% 50%,rgba(124,58,237,.08) 0%,transparent 70%)"></div>
+<div class="absolute inset-0" style="background:radial-gradient(ellipse 60% 40% at 50% 50%,rgba(139,92,246,.08) 0%,transparent 70%)"></div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 <div class="text-center mb-16">
 <h2 class="text-4xl font-black text-white mb-4">Everything You <span class="gradient-text">Need to Earn</span></h2>

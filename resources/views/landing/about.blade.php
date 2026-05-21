@@ -2,7 +2,7 @@
 <html lang="en" class="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>About – UVOZ</title>
 <link href="https://fonts.bunny.net/css?family=inter:400,600,700,800&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
-<style>*{font-family:'Inter',sans-serif;}body{background:#0B1020;color:#fff;}.gradient-text{background:linear-gradient(135deg,#7C3AED,#EC4899,#F59E0B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}.gradient-bg{background:linear-gradient(135deg,#7C3AED,#EC4899);}.card{background:#121A2E;border:1px solid #1E293B;border-radius:24px;}</style></head>
+<style>*{font-family:'Inter',sans-serif;}h1,h2,h3,h4,h5,h6,.gradient-text{font-family:'Montserrat',sans-serif !important;}body{background:#0b1326;color:#fff;}.gradient-text{background:linear-gradient(135deg,#8B5CF6,#06B6D4,#10B981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}.gradient-bg{background:linear-gradient(135deg,#8B5CF6,#06B6D4);}.card{background:#131b2e;border:1px solid #222a3d;border-radius:24px;}</style></head>
 <body class="min-h-screen">
 <nav class="fixed top-0 w-full z-50 border-b border-dark-border" style="background:rgba(11,16,32,.9);backdrop-filter:blur(20px);">
 <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">

@@ -26,9 +26,9 @@
 @endsection
 @section('scripts')
 <script>
-const co={responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#1E293B'},ticks:{color:'#64748B',font:{size:10}}},y:{grid:{color:'#1E293B'},ticks:{color:'#64748B',font:{size:10}}}}};
-new Chart(document.getElementById('userChart'),{type:'line',data:{labels:{{ $dailyUsers->pluck('d')->toJson() }},datasets:[{data:{{ $dailyUsers->pluck('c')->toJson() }},borderColor:'#7C3AED',backgroundColor:'rgba(124,58,237,.1)',fill:true,tension:.4,borderWidth:2,pointRadius:3,pointBackgroundColor:'#7C3AED'}]},options:co});
+const co={responsive:true,plugins:{legend:{display:false}},scales:{x:{grid:{color:'#222a3d'},ticks:{color:'#64748B',font:{size:10}}},y:{grid:{color:'#222a3d'},ticks:{color:'#64748B',font:{size:10}}}}};
+new Chart(document.getElementById('userChart'),{type:'line',data:{labels:{{ $dailyUsers->pluck('d')->toJson() }},datasets:[{data:{{ $dailyUsers->pluck('c')->toJson() }},borderColor:'#8B5CF6',backgroundColor:'rgba(139,92,246,.1)',fill:true,tension:.4,borderWidth:2,pointRadius:3,pointBackgroundColor:'#8B5CF6'}]},options:co});
 new Chart(document.getElementById('revenueChart'),{type:'bar',data:{labels:{{ $revenueChart->pluck('d')->toJson() }},datasets:[{data:{{ $revenueChart->pluck('t')->toJson() }},backgroundColor:'rgba(16,185,129,.6)',borderColor:'#10B981',borderWidth:1,borderRadius:6}]},options:co});
-new Chart(document.getElementById('pointsChart'),{type:'line',data:{labels:{{ $pointsChart->pluck('d')->toJson() }},datasets:[{data:{{ $pointsChart->pluck('t')->toJson() }},borderColor:'#EC4899',backgroundColor:'rgba(236,72,153,.1)',fill:true,tension:.4,borderWidth:2,pointRadius:2}]},options:co});
+new Chart(document.getElementById('pointsChart'),{type:'line',data:{labels:{{ $pointsChart->pluck('d')->toJson() }},datasets:[{data:{{ $pointsChart->pluck('t')->toJson() }},borderColor:'#06B6D4',backgroundColor:'rgba(6,182,212,.1)',fill:true,tension:.4,borderWidth:2,pointRadius:2}]},options:co});
 </script>
 @endsection
