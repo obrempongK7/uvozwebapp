@@ -113,8 +113,12 @@ class AuthController extends Controller
         return redirect()->route('home');
     }
 
-    public function showVerifyOtp()
+    public function showVerifyOtp(Request $request)
     {
+        if ($request->user()->hasVerifiedEmail()) {
+            return redirect()->intended(route('dashboard'));
+        }
+
         return view('auth.verify-otp');
     }
 
