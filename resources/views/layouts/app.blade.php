@@ -9,7 +9,7 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800|montserrat:500,600,700,800,900&display=swap" rel="stylesheet" />
 
     <!-- Tailwind CDN (production should use compiled) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,23 +20,23 @@
                 extend: {
                     colors: {
                         brand: {
-                            purple: '#7C3AED',
-                            pink:   '#EC4899',
-                            amber:  '#F59E0B',
+                            purple: '#8B5CF6',
+                            pink:   '#06B6D4',
+                            amber:  '#10B981',
                         },
                         dark: {
-                            bg:      '#0B1020',
-                            surface: '#121A2E',
-                            card:    '#15203A',
-                            border:  '#1E293B',
-                            hover:   '#1a2640',
+                            bg:      '#0b1326',
+                            surface: '#131b2e',
+                            card:    '#171f33',
+                            border:  '#222a3d',
+                            hover:   '#2d3449',
                         }
                     },
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     borderRadius: { '2xl': '16px', '3xl': '24px', '4xl': '32px' },
                     backgroundImage: {
-                        'brand-gradient': 'linear-gradient(135deg, #7C3AED 0%, #EC4899 50%, #F59E0B 100%)',
-                        'card-gradient':  'linear-gradient(145deg, #121A2E 0%, #15203A 100%)',
+                        'brand-gradient': 'linear-gradient(135deg, #8B5CF6 0%, #06B6D4 50%, #10B981 100%)',
+                        'card-gradient':  'linear-gradient(145deg, #131b2e 0%, #171f33 100%)',
                     }
                 }
             }
@@ -51,39 +51,40 @@
 
     <style>
         * { font-family: 'Inter', sans-serif; }
-        body { background: #0B1020; color: #FFFFFF; }
+        h1, h2, h3, h4, h5, h6, .gradient-text { font-family: 'Montserrat', sans-serif !important; }
+        body { background: #0b1326; color: #FFFFFF; }
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #0B1020; }
-        ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
-        .gradient-text { background: linear-gradient(135deg, #7C3AED, #EC4899, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .gradient-bg  { background: linear-gradient(135deg, #7C3AED 0%, #EC4899 50%, #F59E0B 100%); }
-        .glass { background: rgba(18,26,46,0.8); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }
-        .card { background: #121A2E; border: 1px solid #1E293B; border-radius: 24px; }
+        ::-webkit-scrollbar-track { background: #0b1326; }
+        ::-webkit-scrollbar-thumb { background: #222a3d; border-radius: 4px; }
+        .gradient-text { background: linear-gradient(135deg, #8B5CF6, #06B6D4, #10B981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .gradient-bg  { background: linear-gradient(135deg, #8B5CF6 0%, #06B6D4 50%, #10B981 100%); }
+        .glass { background: rgba(19,27,46,0.8); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); }
+        .card { background: #131b2e; border: 1px solid #222a3d; border-radius: 24px; }
         .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { background: #15203A; border-color: #7C3AED; transform: translateY(-2px); box-shadow: 0 8px 40px rgba(124,58,237,0.15); }
-        .btn-primary { background: linear-gradient(135deg, #7C3AED, #EC4899); color: white; border-radius: 16px; padding: 10px 24px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(124,58,237,0.4); }
-        .btn-secondary { background: #1E293B; color: #CBD5E1; border-radius: 16px; padding: 10px 24px; font-weight: 500; transition: all 0.3s ease; border: 1px solid #1E293B; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
-        .btn-secondary:hover { background: #253045; border-color: #7C3AED; color: white; }
-        .input-field { background: #1E293B; border: 1px solid #253045; border-radius: 14px; padding: 12px 16px; color: white; width: 100%; transition: all 0.3s ease; outline: none; }
-        .input-field:focus { border-color: #7C3AED; box-shadow: 0 0 0 3px rgba(124,58,237,0.15); }
+        .card-hover:hover { background: #171f33; border-color: #8B5CF6; transform: translateY(-2px); box-shadow: 0 8px 40px rgba(139,92,246,0.15); }
+        .btn-primary { background: linear-gradient(135deg, #8B5CF6, #06B6D4); color: white; border-radius: 16px; padding: 10px 24px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(139,92,246,0.4); }
+        .btn-secondary { background: #222a3d; color: #CBD5E1; border-radius: 16px; padding: 10px 24px; font-weight: 500; transition: all 0.3s ease; border: 1px solid #222a3d; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+        .btn-secondary:hover { background: #2d3449; border-color: #8B5CF6; color: white; }
+        .input-field { background: #222a3d; border: 1px solid #2d3449; border-radius: 14px; padding: 12px 16px; color: white; width: 100%; transition: all 0.3s ease; outline: none; }
+        .input-field:focus { border-color: #8B5CF6; box-shadow: 0 0 0 3px rgba(139,92,246,0.15); }
         .input-field::placeholder { color: #64748B; }
         .sidebar-link { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 16px; color: #CBD5E1; transition: all 0.3s ease; font-weight: 500; }
-        .sidebar-link:hover, .sidebar-link.active { background: rgba(124,58,237,0.15); color: white; }
-        .sidebar-link.active { color: #A78BFA; }
-        .audio-player { background: #121A2E; border: 1px solid #1E293B; border-radius: 20px; padding: 16px; }
-        .progress-bar { height: 4px; background: #1E293B; border-radius: 4px; cursor: pointer; position: relative; }
-        .progress-fill { height: 100%; background: linear-gradient(90deg, #7C3AED, #EC4899); border-radius: 4px; transition: width 0.1s linear; }
-        .skeleton { background: linear-gradient(90deg, #1E293B 25%, #253045 50%, #1E293B 75%); background-size: 200% 100%; animation: skeleton-loading 1.5s infinite; border-radius: 12px; }
+        .sidebar-link:hover, .sidebar-link.active { background: rgba(139,92,246,0.15); color: white; }
+        .sidebar-link.active { color: #d0bcff; }
+        .audio-player { background: #131b2e; border: 1px solid #222a3d; border-radius: 20px; padding: 16px; }
+        .progress-bar { height: 4px; background: #222a3d; border-radius: 4px; cursor: pointer; position: relative; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #8B5CF6, #06B6D4); border-radius: 4px; transition: width 0.1s linear; }
+        .skeleton { background: linear-gradient(90deg, #222a3d 25%, #2d3449 50%, #222a3d 75%); background-size: 200% 100%; animation: skeleton-loading 1.5s infinite; border-radius: 12px; }
         @keyframes skeleton-loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
         .badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
-        .badge-purple { background: rgba(124,58,237,0.2); color: #A78BFA; border: 1px solid rgba(124,58,237,0.3); }
-        .badge-green { background: rgba(16,185,129,0.2); color: #34D399; border: 1px solid rgba(16,185,129,0.3); }
-        .badge-amber { background: rgba(245,158,11,0.2); color: #FCD34D; border: 1px solid rgba(245,158,11,0.3); }
-        .badge-pink { background: rgba(236,72,153,0.2); color: #F9A8D4; border: 1px solid rgba(236,72,153,0.3); }
-        .points-display { background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(236,72,153,0.2)); border: 1px solid rgba(124,58,237,0.3); border-radius: 20px; padding: 4px 14px; font-weight: 700; color: #A78BFA; font-size: 14px; }
+        .badge-purple { background: rgba(139,92,246,0.2); color: #d0bcff; border: 1px solid rgba(139,92,246,0.3); }
+        .badge-green { background: rgba(16,185,129,0.2); color: #4edea3; border: 1px solid rgba(16,185,129,0.3); }
+        .badge-amber { background: rgba(16,185,129,0.2); color: #6ffbbe; border: 1px solid rgba(16,185,129,0.3); }
+        .badge-pink { background: rgba(6,182,212,0.2); color: #acedff; border: 1px solid rgba(6,182,212,0.3); }
+        .points-display { background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(6,182,212,0.2)); border: 1px solid rgba(139,92,246,0.3); border-radius: 20px; padding: 4px 14px; font-weight: 700; color: #d0bcff; font-size: 14px; }
         .toast { position: fixed; bottom: 24px; right: 24px; z-index: 9999; max-width: 380px; }
-        .notification-dot { width: 8px; height: 8px; background: #EC4899; border-radius: 50%; position: absolute; top: 2px; right: 2px; }
+        .notification-dot { width: 8px; height: 8px; background: #06B6D4; border-radius: 50%; position: absolute; top: 2px; right: 2px; }
         @media (max-width: 767px) { .sidebar-desktop { display: none; } }
         @media (min-width: 1024px) { .sidebar-mobile-overlay { display: none; } }
     </style>
@@ -305,7 +306,7 @@
 
         <!-- Upgrade CTA (for free users) -->
         @if(!auth()->user()->subscription || auth()->user()->subscription->plan->isFree())
-        <div class="mt-auto mx-3 mb-4 p-4 rounded-2xl" style="background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(236,72,153,0.2)); border: 1px solid rgba(124,58,237,0.3);">
+        <div class="mt-auto mx-3 mb-4 p-4 rounded-2xl" style="background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(6,182,212,0.2)); border: 1px solid rgba(139,92,246,0.3);">
             <p class="text-xs font-semibold text-purple-300 mb-1">Upgrade to Pro</p>
             <p class="text-xs text-slate-400 mb-3">5000 pts/day + 70% boost</p>
             <a href="{{ route('subscribe.plans') }}" class="btn-primary text-xs py-2 px-3 w-full justify-center">Upgrade Now</a>

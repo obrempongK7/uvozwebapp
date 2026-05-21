@@ -12,7 +12,7 @@
 <div class="text-right"><p class="text-2xl font-black text-white" x-text="listenerCount">{{ $liveRoom->listeners_count }}</p><p class="text-xs text-slate-500">listeners</p></div>
 </div>
 <!-- Stage / Speakers -->
-<div class="rounded-2xl p-4 mb-4" style="background:#0B1020;min-height:120px;">
+<div class="rounded-2xl p-4 mb-4" style="background:#0b1326;min-height:120px;">
 <p class="text-xs text-slate-500 uppercase tracking-wider mb-3">On Stage</p>
 <div class="flex flex-wrap gap-3">
 @foreach($liveRoom->participants->whereIn('role',['host','co_host','speaker'])->take(10) as $p)
@@ -25,7 +25,7 @@
 </div>
 </div>
 <!-- Live Chat -->
-<div class="rounded-2xl p-4 mb-4" style="background:#0B1020;height:200px;overflow-y:auto;" id="live-chat">
+<div class="rounded-2xl p-4 mb-4" style="background:#0b1326;height:200px;overflow-y:auto;" id="live-chat">
 <template x-for="msg in messages" :key="msg.id">
 <div class="flex items-start gap-2 mb-2">
 <span class="text-xs font-semibold text-purple-400" x-text="msg.user?.display_name"></span>

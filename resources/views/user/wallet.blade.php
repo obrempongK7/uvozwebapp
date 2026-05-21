@@ -4,7 +4,7 @@
 <div class="mb-6"><h1 class="text-2xl font-bold text-white">My Wallet</h1><p class="text-slate-400 text-sm mt-1">Manage your earnings and balance</p></div>
 <div class="grid lg:grid-cols-3 gap-5 mb-8">
 <!-- Points Balance -->
-<div class="card p-6" style="background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(236,72,153,.1));border-color:rgba(124,58,237,.3);">
+<div class="card p-6" style="background:linear-gradient(135deg,rgba(139,92,246,.15),rgba(6,182,212,.1));border-color:rgba(139,92,246,.3);">
 <div class="flex items-center gap-3 mb-4">
 <div class="w-10 h-10 gradient-bg rounded-xl flex items-center justify-center">
 <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -28,7 +28,7 @@
 <!-- Total Earned -->
 <div class="card p-6">
 <div class="flex items-center gap-3 mb-4">
-<div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(245,158,11,.2)">
+<div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(16,185,129,.2)">
 <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
 </div>
 <p class="text-xs text-slate-400 uppercase tracking-wider">All-Time Earned</p>
@@ -44,11 +44,11 @@
 <div><p class="font-semibold text-white">Withdraw</p><p class="text-xs text-slate-400">Cash out earnings</p></div>
 </a>
 <a href="{{ route('wallet.rewards') }}" class="card p-5 flex items-center gap-4 card-hover">
-<div class="w-12 h-12 rounded-2xl flex items-center justify-center" style="background:rgba(124,58,237,.2)"><svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4H5z"/></svg></div>
+<div class="w-12 h-12 rounded-2xl flex items-center justify-center" style="background:rgba(139,92,246,.2)"><svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4H5z"/></svg></div>
 <div><p class="font-semibold text-white">Rewards</p><p class="text-xs text-slate-400">Redeem for prizes</p></div>
 </a>
 <a href="{{ route('campaign.index') }}" class="card p-5 flex items-center gap-4 card-hover">
-<div class="w-12 h-12 rounded-2xl flex items-center justify-center" style="background:rgba(245,158,11,.2)"><svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg></div>
+<div class="w-12 h-12 rounded-2xl flex items-center justify-center" style="background:rgba(16,185,129,.2)"><svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg></div>
 <div><p class="font-semibold text-white">Earn More</p><p class="text-xs text-slate-400">Complete campaigns</p></div>
 </a>
 </div>

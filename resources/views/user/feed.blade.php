@@ -11,7 +11,7 @@
 
 <!-- Active Campaigns Banner -->
 @if($campaigns->count())
-<div class="card p-4 mb-4" style="border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.05);">
+<div class="card p-4 mb-4" style="border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.05);">
 <p class="text-xs font-semibold text-amber-400 mb-2">💰 Earn Extra Points – Complete These Tasks</p>
 <div class="flex gap-3 overflow-x-auto pb-1">
 @foreach($campaigns as $campaign)
@@ -43,7 +43,7 @@
 <a href="{{ route('voice.show',$post) }}" class="block font-semibold text-white hover:text-purple-400 mb-3">{{ $post->title }}</a>
 @if($post->description)<p class="text-sm text-slate-400 mb-3 line-clamp-2">{{ $post->description }}</p>@endif
 <!-- Mini Player -->
-<div class="rounded-2xl p-4 mb-3" style="background:#0B1020;">
+<div class="rounded-2xl p-4 mb-3" style="background:#0b1326;">
 <div class="flex items-center gap-3">
 <button onclick="playVoice('{{ $post->audio_url }}','{{ addslashes($post->title) }}','{{ addslashes($post->user->display_name) }}','{{ $post->cover_url }}');fetch('{{ route('voice.play',$post) }}',{method:'POST',headers:{'X-CSRF-TOKEN':'{{ csrf_token() }}'}});"
     class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center flex-shrink-0">
@@ -51,7 +51,7 @@
 </button>
 <div class="flex-1">
 <div class="flex gap-px h-6 items-center">
-@for($i=0;$i<24;$i++)<div class="w-1 rounded-full" style="height:{{ rand(4,24) }}px;background:linear-gradient(180deg,rgba(124,58,237,.6),rgba(236,72,153,.3));"></div>@endfor
+@for($i=0;$i<24;$i++)<div class="w-1 rounded-full" style="height:{{ rand(4,24) }}px;background:linear-gradient(180deg,rgba(139,92,246,.6),rgba(6,182,212,.3));"></div>@endfor
 </div>
 </div>
 <span class="text-xs text-slate-500">{{ $post->formatted_duration }}</span>

@@ -3,7 +3,7 @@
 @section('content')
 <div class="max-w-3xl mx-auto">
 <!-- Cover -->
-<div class="relative h-48 rounded-3xl overflow-hidden mb-16" style="background:linear-gradient(135deg,#7C3AED,#EC4899,#F59E0B);">
+<div class="relative h-48 rounded-3xl overflow-hidden mb-16" style="background:linear-gradient(135deg,#8B5CF6,#06B6D4,#10B981);">
 @if($profile->cover_image)<img src="{{ $profile->cover_url }}" class="w-full h-full object-cover">@endif
 <!-- Avatar -->
 <div class="absolute -bottom-12 left-6">
